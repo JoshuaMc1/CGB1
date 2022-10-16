@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/6cf319f10f.js" crossorigin="anonymous"></script>
     <title>Integrantes</title>
     <style>
         body {
@@ -190,6 +191,110 @@
                 opacity: 0
             }
         }
+
+        /* ************************************************************************************ */
+        .card-members {
+            position: relative;
+            width: auto;
+            height:570px;
+            background: #000;
+            border-radius: 15px;
+        }
+
+        .card-members .image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .card-members .image img {
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+        }
+
+        .card-members:hover .image img {
+            opacity: .5;
+            transform: translateX(30%);
+            /*100%*/
+        }
+
+        .card-members .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            /*100%*/
+            height: 100%;
+            background: #143642;
+            border-radius: 15px;
+            transition: .5s;
+            transform-origin: left;
+            transform: perspective(2000px) rotateY(-90deg);
+        }
+
+        .card-members:hover .details {
+            transform: perspective(2000px) rotateY(0deg);
+        }
+
+        .card-members .details .center {
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+        .card-members .details .center h1 {
+            margin: 0;
+            padding: 0;
+            color: #004b23;
+            line-height: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .card-members .details .center h1 span {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .card-members .details .center p {
+            margin: 10px 0;
+            padding: 0;
+            color: #262626;
+        }
+
+        .card-members .details .center ul {
+            margin: 10px auto 0;
+            padding: 0;
+            display: table;
+        }
+
+        .card-members .details .center ul li {
+            list-style: none;
+            margin: 0 5px 5px 0;
+            float: left;
+            align-items: center;
+        }
+
+        .card-members .details .center ul li a {
+            display: block;
+            background: #262626;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            transform: .5s;
+        }
+
+        .card-members .details .center ul li a:hover {
+            background: #004b23;
+        }
     </style>
 </head>
 
@@ -218,54 +323,91 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-12 mb-3 animate__animated animate__bounceInLeft animate__delay-2s">
-                        <a href="https://www.facebook.com/natanael.portillo.58" target="_blank" class="text-decoration-none" rel="noopener noreferrer">
-                            <div class="card p-3 shadow">
-                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/18922011_779364062227120_2292997722749601462_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZRk1w96r4nQAX_CPwq5&_nc_ht=scontent-mia3-1.xx&oh=00_AT_FyeuNHBtiAkTArvqKGMOqfTXUXq5KBPkpuMFfOjhxVw&oe=636EFCA6" class="card-img-top"
-                                    alt="Foto de perfil" style="height: 25rem; width: auto;">
-                                <div class="card-body">
-                                    <h4 class="card-title fw-bold text-dark">Elkin Portillo</h4>
+                        <div class="card-members">
+                            <div class="image">
+                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.18169-9/18922011_779364062227120_2292997722749601462_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZRk1w96r4nQAX_CPwq5&_nc_ht=scontent-mia3-1.xx&oh=00_AT_FyeuNHBtiAkTArvqKGMOqfTXUXq5KBPkpuMFfOjhxVw&oe=636EFCA6" />
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>Elkin Portillo<br><span>Grupo 6</span></h1>
+                                    <p><strong>Numero de cuenta: </strong>201910070080</p>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/natanael.portillo.58"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-12 mb-3 animate__animated animate__bounceInLeft animate__delay-3s">
-                        <a href="https://www.facebook.com/profile.php?id=100074791157958" target="_blank" class="text-decoration-none" rel="noopener noreferrer">
-                            <div class="card p-3 shadow">
-                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/289181124_170256668810704_5956405287618963682_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=kxmi074DnQcAX9dRAKs&_nc_ht=scontent-mia3-1.xx&oh=00_AT_7as2y7-MxVND8i77N7Be2XRJMa35Gh7Oicofd6urKUA&oe=634DCD8D" class="card-img-top"
-                                    alt="Foto de perfil" style="height: 25rem; width: auto;">
-                                <div class="card-body">
-                                    <h4 class="card-title fw-bold text-dark">Antonio Izaguirre</h4>
+                        <div class="card-members">
+                            <div class="image">
+                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/289181124_170256668810704_5956405287618963682_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=kxmi074DnQcAX9dRAKs&_nc_ht=scontent-mia3-1.xx&oh=00_AT_7as2y7-MxVND8i77N7Be2XRJMa35Gh7Oicofd6urKUA&oe=634DCD8D" />
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>Saul Antonio Izaguirre<br><span>Grupo 6</span></h1>
+                                    <p><strong>Numero de cuenta: </strong>202010020281</p>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/profile.php?id=100074791157958"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-12 mb-3 animate__animated animate__bounceInLeft animate__delay-4s">
-                        <a href="https://www.facebook.com/Danny19M" target="_blank" class="text-decoration-none" rel="noopener noreferrer">
-                            <div class="card p-3 shadow">
-                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/122276064_1244812722563202_6077946052243912212_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=43RNdRxtwIEAX-7bmw0&_nc_ht=scontent-mia3-1.xx&oh=00_AT-xwRymgkHKzUqsmdtaBEIhQtWaEaZcd6wGCdvrEl2Zvw&oe=636DF6C8" class="card-img-top"
-                                    alt="Foto de perfil" style="height: 25rem; width: auto;">
-                                <div class="card-body">
-                                    <h4 class="card-title fw-bold text-dark">Danny Acosta</h4>
+                        <div class="card-members">
+                            <div class="image">
+                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/122276064_1244812722563202_6077946052243912212_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=43RNdRxtwIEAX-7bmw0&_nc_ht=scontent-mia3-1.xx&oh=00_AT-xwRymgkHKzUqsmdtaBEIhQtWaEaZcd6wGCdvrEl2Zvw&oe=636DF6C8" />
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>José Danilo Acosta<br><span>Grupo 6</span></h1>
+                                    <p><strong>Numero de cuenta: </strong>201910070080</p>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/Danny19M"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-12 mb-3 animate__animated animate__bounceInLeft animate__delay-5s">
-                        <a href="https://www.facebook.com/david.mclean.79069/" target="_blank" class="text-decoration-none" rel="noopener noreferrer">
-                            <div class="card p-3 shadow">
-                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/80643075_2501985870054772_4749238612439072768_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MndsP9R3SLYAX_kJQCK&_nc_ht=scontent-mia3-1.xx&oh=00_AT_-qIRKuWPC3rGrFtBWea12VD-J0_jxYhQFLG_eC9OzDw&oe=636CED22" class="card-img-top"
-                                    alt="Foto de perfil" style="height: 25rem; width: auto;">
-                                <div class="card-body">
-                                    <h4 class="card-title fw-bold text-dark">Joshua David Mclean</h4>
+                        <div class="card-members">
+                            <div class="image">
+                                <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/80643075_2501985870054772_4749238612439072768_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MndsP9R3SLYAX_kJQCK&_nc_ht=scontent-mia3-1.xx&oh=00_AT_-qIRKuWPC3rGrFtBWea12VD-J0_jxYhQFLG_eC9OzDw&oe=636CED22" />
+                            </div>
+                            <div class="details">
+                                <div class="center">
+                                    <h1>Joshua David Mclean<br><span>Grupo 6</span></h1>
+                                    <p><strong>Numero de cuenta: </strong>201920020146</p>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/david.mclean.79069/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://twitter.com/JosDav0"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://github.com/JoshuaMc1"><i class="fa-brands fa-github"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/joshua_mc_esc/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="col-lg-12 animate__animated animate__fadeIn animate__delay-2s">
                         <div class="card shadow">
                             <div class="card-body">
                                 <div class="d-grid">
-                                    <a href="https://www.uth.hn/" class="btn btn-success bg-green" target="_blank" rel="noopener noreferrer">IR A UTH</a>
+                                    <a href="https://www.uth.hn/" class="btn btn-success bg-green" target="_blank"
+                                        rel="noopener noreferrer">IR A UTH</a>
                                 </div>
                             </div>
                         </div>
